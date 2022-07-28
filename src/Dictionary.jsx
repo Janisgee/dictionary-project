@@ -1,4 +1,4 @@
-import react, { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import "./Dictionary.css";
 
@@ -11,6 +11,8 @@ export default function Dictionary() {
 
   function search(event) {
     event.preventDefault();
+
+    // documentation: heeps://dictionaryapi.dev/
     const apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     console.log(apiUrl);
     axios.get(apiUrl).then(handleResponse);
