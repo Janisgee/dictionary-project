@@ -1,5 +1,3 @@
-import react from "react";
-
 export default function Example(props) {
   if (props.example) {
     return (
